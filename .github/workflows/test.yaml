@@ -1,0 +1,25 @@
+name: test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: test vault stage
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - name: Vault
+        uses: hashicorp/vault-action@v2.7.0
+        id: secrets
+        with:
+          url: https://vault.fen4o.com
+          role: test-github-actions-key-reader
+          method: jwt
+          secrets: |
+            test/data/foo/bar foo
