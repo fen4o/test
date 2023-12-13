@@ -5,7 +5,8 @@ on:
 
 jobs:
   test:
-    name: test vault stage
+    name: test vault test
+    environment: test
     runs-on: ubuntu-latest
     permissions:
       checks: write
