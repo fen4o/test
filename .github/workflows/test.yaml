@@ -21,7 +21,7 @@ jobs:
         with:
           url: https://vault.fen4o.com
           jwtGithubAudience: https://vault.fen4o.com
-          role: test-github-actions-key-reader
+          role: auth/github/role/test-github-actions-key-reader
           method: jwt
           jwtTtl: 60
           secrets: |
