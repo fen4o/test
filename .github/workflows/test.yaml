@@ -45,3 +45,4 @@ jobs:
           jwtTtl: 60
           secrets: |
             test/data/foo/bar foo
+            test/data/muu/gaz bbaaa
