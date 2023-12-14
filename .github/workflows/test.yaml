@@ -41,6 +41,7 @@ jobs:
           jwtGithubAudience: https://vault.fen4o.com
           role: test-github-actions-key-reader
           method: jwt
+          path: github
           jwtTtl: 60
           secrets: |
             test/data/foo/bar foo
